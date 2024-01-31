@@ -1,0 +1,62 @@
+h3{
+    text-align: center;
+}
+
+.gdt-title{
+    position: relative;
+    text-align: center;
+    color: orange;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.title-name {
+    font-size: 42pt;
+    font-weight: bold;
+}
+
+.title-slogan {
+    font-size: 30pt;
+    font-style: italic;
+}
+
+.footer {
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: purple;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+@media only screen and (max-width: 1000px) {
+    .title-name {
+        font-size: 24pt;
+    }
+    .title-slogan {
+        font-size: 18pt;
+        font-style: italic;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title-name {
+        font-size: 18pt;
+    }
+    .title-slogan {
+        font-size: 13pt;
+        font-style: italic;
+    }
+}
