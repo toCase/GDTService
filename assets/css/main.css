@@ -1,5 +1,44 @@
+
+body {
+    background-color: #F7EBD4;
+    color: #0A3409;
+}
+
 h3{
     text-align: center;
+
+}
+
+nav{
+    background-color: #33bf31d3;
+}
+
+
+
+.card-about{
+    width: 700px;
+    background-color: #FFAC05;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.card-header{
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+    color: #0A3409;
+}
+
+.card-text {
+    text-indent: 35px;
+    color: #0A3409;
+    font-size: 15pt;
+}
+
+.nav-link{
+    color: #F7EBD4;
+    font-weight: bold;    
 }
 
 .gdt-title{
