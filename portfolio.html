@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="assets/css/portfolio.css" rel="stylesheet" type="text/css" media="screen">
 
     <title>GDT-Service</title>
 </head>
@@ -21,30 +22,126 @@
     <nav class="navbar sticky-top navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" alt="GDT-Service" width="50" height="50" class="d-inline-block align-text-top">
-                GDT-Service
+                <img src="assets/img/logo.png" alt="GDT-Service" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                <span></span>GDT-Service
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключить навигацию">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключить навигацию">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav d-flex">
-                    <a class="nav-link"  href="index.html">Головна</a>
+                <div class="navbar-nav justify-content-center">
+                    <a class="nav-link" href="index.html">Головна</a>
                     <a class="nav-link" href="service.html">Послуги</a>
-                    <a class="nav-link active" aria-current="page" href="portfolio.html">Портфоліо</a>
+                    <a class="nav-link active" aria-current="page" href="#">Портфоліо</a>
                     <a class="nav-link" href="sertificate.html">Сертифікати</a>
                     <a class="nav-link" href="contacts.html">Контакти</a>
                 </div>
             </div>
         </div>
     </nav>
+    
+    <!--Portfolio Slider-->
 
-    <div class="container-fluid">
-        
-        <hr>
-        <h3>GDT-Service portfolio</h3>
-        <hr>
+    <div class="slider">
+        <div class="list">
+            <div class="item active">
+                <img src="assets/img/portfolio/pf1.jpg">
+                <div class="content">
+                    <p>ремонт</p>
+                    <h2>Мотор Д12</h2>
+                    <p>
+                        Мотор Д12-15т. Год выпуска 1978г. Более трех лет стоял под открытым небом. 
+                        Выполнена замена втулок, вкладышей, поршней. Выполнена фрезеровка крышки. 
+                        Восстановлена помпа и топлывные насосы.   
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/portfolio/pf2.jpg">
+                <div class="content">
+                    <p>object B</p>
+                    <h2>Slider Foto 02</h2>
+                    <p>
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/portfolio/pf3.jpg">
+                <div class="content">
+                    <p>object C</p>
+                    <h2>Slider Foto 03</h2>
+                    <p>
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/portfolio/pf4.jpg">
+                <div class="content">
+                    <p>object D</p>
+                    <h2>Slider Foto 04</h2>
+                    <p>
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/portfolio/pf5.jpg">
+                <div class="content">
+                    <p>object E</p>
+                    <h2>Slider Foto 05</h2>
+                    <p>
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description. Some text for description.
+                        Some text for description. Some text for description.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Control button-->
+    <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
     </div>
+
+    <!--thumbnail-->
+    <div class="thumbnail">
+        <div class="item active">
+            <img src="assets/img/portfolio/pf1.jpg">
+            <div class="content">Title A</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/portfolio/pf2.jpg">
+            <div class="content">Title B</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/portfolio/pf3.jpg">
+            <div class="content">Title C</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/portfolio/pf4.jpg">
+            <div class="content">Title D</div>
+        </div>
+        <div class="item">
+            <img src="assets/img/portfolio/pf5.jpg">
+            <div class="content">Title F</div>
+        </div>
+    </div>
+    </div>
+
+    
+
+    
     
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -53,5 +150,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <script src="assets/js/portfolio.js"></script>
 </body>
 </html>
