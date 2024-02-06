@@ -1,20 +1,14 @@
 :root{
-    --bg_color: #252c42
-}
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-body{
-    font-family: Ubuntu;
-    margin: 0;
-    background-color: var(--bg_color);
-    color: #eee;
+    --bg_color: #252c42;
+    --text_color: rgb(217, 217, 217);
 }
 
 /* slider */
 .slider {
     height: 100vh;
-    margin-top: -80px; 
+    /* margin-top: -80px;  */
     position: relative;
+    color: var(--text_color);
 }
 
 .slider .list .item {
@@ -39,14 +33,14 @@ body{
     left: 0;
     bottom: 0;
     background-image: linear-gradient(
-        to top, var(--bg_color) 20%, transparent 50%, transparent
+        to top, var(--bg_color) 30%, transparent 50%, transparent
     );
 }
 
 .slider .list .item .content{
     position: absolute;
     left: 10%;
-    top: 20%;
+    top: 25%;
     width: 500px;
     max-width: 80%;
     z-index: 1;
@@ -55,11 +49,17 @@ body{
 .slider .list .item .content p:nth-child(1){
     text-transform: uppercase;
     letter-spacing: 10px;
+    font-size: 1.3em;
 }
 
 .slider .list .item .content h2{
-    font-size: 100px;
+    font-size: 8em;
     margin: 0;
+}
+
+.slider .list .item .content p:nth-child(3){
+    font-size: 1.1em;
+    font-weight: 300;
 }
 
 .slider .list .item.active {
@@ -96,7 +96,8 @@ body{
 /*arrow buttons */
 .arrows{
     position: absolute;
-    top: 30%;
+    /* top: 30%; */
+    bottom: 350px;
     right: 50px;
     z-index: 100;
 }
@@ -165,11 +166,30 @@ body{
     .thumbnail{
         justify-content: start;
     }
-    .slider .list .item .content h2{
-        font-size: 60px;
-    }
+    
     .arrows{
-        top: 10%;
+        top: 80px;
+        right: 5px;
     }
+    
+
+    .slider .list .item .content{
+        position: absolute;
+        left: 5px;
+        top: 80px;
+        width: 500px;
+        max-width: 80%;
+        z-index: 1;
+    }
+    .slider .list .item.active p:nth-child(1){
+        font-size: .8em;
+    }
+    .slider .list .item .content h2{
+        font-size: 3em;
+    }
+    .slider .list .item.active p:nth-child(3){
+        display: none;
+    }
+
 }
 

@@ -1,78 +1,44 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="assets/css/docs.css" rel="stylesheet" type="text/css" media="screen">
 
+
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="screen">
 
     <title>GDT-Service</title>
 </head>
+
 <body>
     <!--Navigation-->
-    <nav class="navbar sticky-top navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" alt="GDT-Service" width="50" height="50" class="d-inline-block align-text-top">
-                GDT-Service
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключить навигацию">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav d-flex">
-                    <a class="nav-link"  href="index.html">Головна</a>
-                    <a class="nav-link" href="service.html">Послуги</a>
-                    <a class="nav-link" href="portfolio.html">Портфоліо</a>
-                    <a class="nav-link active" aria-current="page" href="sertificate.html">Сертифікати</a>
-                    <a class="nav-link" href="contacts.html">Контакти</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="content">
+    <header>
+        <h1 class="logo">ЖДТ-СЕРВІС</h1>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="service.html">Послуги</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="#">Документи</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
 
     
+    <hr>
+    <h3>Docs here</h3>
+    <hr>
 
-    <div class="section0">
-        <img src="assets/img/title.png">
-        <p class="name">ЖДТ-СЕРВІС</p>
-        <p class="slogan">йдемо в ногу з клієнтом</p> 
-    </div>
 
-    <div class="sectionA">
-        <div class="header">
-            <img src="assets/img/heart.png">
-            <p>Про компанію</p>
-        </div>
-        <div class="content">
-            <p>Основний вид діяльності нашого підприємства – обслуговування та ремонт маневрових тепловозів серії
-                ТГМ-4, ТГМ-6, ТЕМ-2, ТГМ-23, ТГМ-40,
-                ТГК-2 та їх модифікацій в обсязі ТО, ПР, КР.</p>
-            <p>Виконуємо ремонт окремих вузлів та агрегатів. Встановлюємо системи автономного електрообігрівання
-                на всі моделі маневрових тепловозів.</p>
-            <p>На всі відремонтовані об’єкти надаємо гарантію, за умови правильної експлуатації. Також підприємство
-                займається постачанням запасних частин та витратних матеріалів до маневрових тепловозів.</p>
-        </div>
-    </div>
-</div>
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --bg_color: #252c42;
+    --title_color: #00d517;
+    --title-contact: #800080;
+}
+
+.contact{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100hv;
+    position: absolute;
+    margin: 250px auto auto auto;
+    color: white;
+}
+
+.contact p{
+    width: 100%;
+    text-align: center;
+    text-indent: 40px;
+    /* background-color: var(--bg_color); */
+    font-size: xx-large;
+    font-weight: 700;
+    color: var(--title_color);
+    margin-bottom: 50px;    
+}
+
+.contact .item{
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    /* background-color: #00d517; */
+    gap: 20px;
+    margin: 15px auto 15px auto;
+    font-size: x-large;
+}
+
+.contact .item i{
+    width: 36px;
+    height: 36px;
+    color: var(--title_contact);
+}
+
+/* @media screen and (max-width: 1000px) {
+    .contact{
+        width: 100%;
+    }
+    .contact p{
+        text-align: center;
+    }
+    .contact .item{
+        width: max-content;
+    }
+} */
+
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }    
+}
+
+.contact p,
+.contact .item{
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards; 
+}
+
+.contact .item{
+    animation-delay: .8s;
+}
