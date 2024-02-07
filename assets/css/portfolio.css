@@ -1,71 +1,64 @@
-:root{
-    --bg_color: #252c42;
-    --text_color: rgb(217, 217, 217);
-}
 
-/* slider */
 .slider {
-    height: 100vh;
-    /* margin-top: -80px;  */
-    
     position: relative;
-    color: var(--text_color);
+    height: 100vh;
 }
 
-.slider .list .item {
+.slider .list .item{
     position: absolute;
-    inset: 0 0 0 0;
+    inset: 0 0 0 0;    
     overflow: hidden;
     opacity: 0;
-    transition: .5s;
 }
 
 .slider .list .item img{
+    margin-top: 80px;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     object-fit: cover;
+    filter: brightness(1.2)
 }
 
 .slider .list .item::after{
     content: '';
+    margin-top: 80px;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     background-image: linear-gradient(
-        to top, var(--bg_color) 30%, transparent 50%, transparent
+        to top, var(--bg_color) 10%, transparent 30%, transparent
     );
+}
+
+.slider .list .item.active{
+    opacity: 1;
 }
 
 .slider .list .item .content{
     position: absolute;
-    left: 10%;
-    top: 25%;
-    width: 500px;
-    max-width: 80%;
+    top: 70%;
+    left: 5%;
+    bottom: 0;
+    right: 5%;
     z-index: 1;
 }
 
 .slider .list .item .content p:nth-child(1){
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .slider .list .item .content h2{
-    font-size: 8em;
+    font-size: 2rem;
     margin: 0;
 }
 
 .slider .list .item .content p:nth-child(3){
-    font-size: 1.1em;
-    font-weight: 300;
-}
-
-.slider .list .item.active {
-    opacity: 1;
-    z-index: 10;
+    font-size: 0.8rem;
+    font-weight: 200;
 }
 
 @keyframes showContent {
@@ -90,16 +83,11 @@
     animation-delay:  .5s;
 }
 
-.slider .list .item.active p:nth-child(3){ 
-    animation-delay: .8s;
-}
-
 /*arrow buttons */
 .arrows{
     position: absolute;
-    /* top: 30%; */
-    bottom: 350px;
-    right: 50px;
+    bottom: 15%;
+    right: 5%;
     z-index: 100;
 }
 
@@ -120,77 +108,83 @@
     color: #000;
 }
 
-/*thumbnail*/
 .thumbnail{
-    position: absolute;
-    bottom: 50px;
-    z-index: 11;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    height: 250px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    overflow: auto;
-    justify-content: center;
+    display: none;
 }
 
-.thumbnail::-webkit-scrollbar{
-    width: 0;
-}
 
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    filter: brightness(.5);
-    transition: .5s;
-    flex-shrink: 0;
-}
-
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.thumbnail .item.active{
-    filter: brightness(1.5)
-}
-
-.thumbnail .item .content{
-    position: absolute;
-    inset: auto 10px 10px 10px;
-}
-
-@media screen and (max-width: 678px) {
-    .thumbnail{
-        justify-content: start;
+@media screen and (min-width: 400px) {
+    .slider .list .item .content p:nth-child(1){
+        font-size: 1.2em;
     }
     
-    .arrows{
-        top: 80px;
-        right: 5px;
-    }
-    
-
-    .slider .list .item .content{
-        position: absolute;
-        left: 5px;
-        top: 80px;
-        width: 500px;
-        max-width: 80%;
-        z-index: 1;
-    }
-    .slider .list .item.active p:nth-child(1){
-        font-size: .8em;
-    }
     .slider .list .item .content h2{
-        font-size: 3em;
+        font-size: 2.5rem;
     }
-    .slider .list .item.active p:nth-child(3){
-        display: none;
-    }
-
+    
+    .slider .list .item .content p:nth-child(3){
+        font-size: 1.2rem;
+    }    
 }
+
+@media screen and (min-width: 800px) {    
+    .slider .list .item .content p:nth-child(1){
+        font-size: 1.4em;
+    }
+    
+    .slider .list .item .content h2{
+        font-size: 3rem;
+    }    
+    .slider .list .item .content p:nth-child(3){
+        font-size: 1.4rem;
+    }    
+}
+/*
+@media screen and (min-width: 1000px) {
+    .slider .list .item .content{        
+        right: 55%;
+    }    
+    .slider .list .item .content p:nth-child(3){
+        font-size: 1.2rem;
+    }   
+     
+    .thumbnail{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        z-index: 11;
+        display: flex;
+        gap: 5px;
+        width: 50vw;
+        height: 200px;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: auto;
+        justify-content: center;
+    }
+    
+    .thumbnail::-webkit-scrollbar{
+        width: 0;
+    }
+    
+    .thumbnail .item{
+        width: calc(20% - 15px);
+        height: 220px;
+        filter: brightness(.5);
+        transition: .5s;
+        flex-shrink: 0;
+    }
+    
+    .thumbnail .item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .thumbnail .item.active{
+        filter: brightness(1.5)
+    }
+     
+     
+}*/
 
