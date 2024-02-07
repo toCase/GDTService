@@ -7,6 +7,7 @@
 .slider {
     height: 100vh;
     /* margin-top: -80px;  */
+    
     position: relative;
     color: var(--text_color);
 }
