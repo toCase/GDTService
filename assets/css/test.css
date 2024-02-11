@@ -1,45 +1,111 @@
-.column{
-    padding: 2rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+:root {
+  --bg_color_sec: #3a4154;
 }
 
-.column .item{
-    background-color: orange;
-    border-radius: 10px;
-    padding: 2rem;    
+main {
+  position: absolute;
+  margin-top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
-.column .item .item-title{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
+main h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px 10px 15px 10px;
 }
 
-.item-title {
-    font-size: 1.4rem;
-    color: var(--bg_color);
+main h1 span {
+  font-size: .8rem;
+  display: block;
+  padding-left: 4px;
+  color: var(--menu_color);
 }
 
-.item .item-content{
+main .tabs {
+    position: relative;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    
+
     font-size: 1rem;
-    text-indent: 35px;
-    color: var(--bg_color);
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-items: flex-start;
+    align-items: center;
+    
+    overflow-x: auto;
+}
+.tabs::-webkit-scrollbar{
+    width: 0;
 }
 
-@media screen and (min-width:500px) {
-    .column{
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+main .tabs .item{
+    width: fit-content;
+    height: 90%;
+    padding: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-content: center;
+}
+
+main .tabs .active{
+    background-color: var(--bg_color_sec);
+}
+
+main .tabs .item:hover{
+    background-color: var(--bg_color_sec);
+}
+
+main .cards {
+    position: relative;
+    margin: 0 auto 0 auto;
+    /* top: -1.3rem; */
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* width: 95vw;
+    height: 100%; */
+
+    background-color: var(--bg_color_sec);
+}
+
+main .cards .item{
+    padding: 1rem;
+    font-size: 1.2rem;
+    display: none;
+}
+
+main .cards .active{
+    display: block; 
+}
+
+main .cards {
+    font-weight: 300;
+}
+
+.h{
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        padding: 3rem;
     }
-}
+    main .cards .active{
+        padding: 3rem;
+    }
 
-@media screen and (min-width:800px) {
-    .column {
-        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    main h1 span{
+        margin-bottom: 2rem;;
     }
 }
