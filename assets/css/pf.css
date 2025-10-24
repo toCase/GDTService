@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {
+.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .SliderTGM40 {
     display: none
 }
 
@@ -68,7 +68,7 @@ img {
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2, .dot3, .dot4, .dot5, .dot6 {
+.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dotTGM40 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -85,7 +85,8 @@ img {
 .dot3::hover,
 .dot4::hover,
 .dot5::hover,
-.dot6::hover {
+.dot6::hover,
+.dotTGM40::hover {
     background-color: #111111;
 }
 
