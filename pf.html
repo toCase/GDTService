@@ -94,6 +94,82 @@
             <span class="dot" onclick="currentSlide(6)"></span>
         </div>
         <br>
+
+        <!-- Project tgm-40 -->
+        <div class="header-box">
+            <h2>Тепловоз ТГМ-40</h2>    
+        </div>
+        <div class="text-box">
+            <p>Капітальний ремонт. 2025 рік.</p>
+        </div>
+        <div class="slideshow-container">
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">1 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">2 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_1.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">3 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_2.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">4 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_3.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">5 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_4.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">6 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_5.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_6.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_7.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_8.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="SliderTGM40 fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="assets/img/portfolio/tgm-40/tgm40_9.jpeg"
+                    style="width:100%">
+            </div>
+            <a class="prev" onclick="SliderTGM40(-1)">&#10094;</a>
+            <a class="next" onclick="SliderTGM40(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dotTGM40" onclick="currentSlideTGM40(1)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(2)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(3)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(4)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(5)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(6)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(7)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(8)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(9)"></span>
+            <span class="dotTGM40" onclick="currentSlideTGM40(10)"></span>
+        </div>
+        <br>
         
         <!-- Project num 2 -->
         <div class="header-box">
@@ -340,6 +416,38 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+
+        //-- tgm 40
+
+        var slideIndexTGM40 = 1;
+        showSlidesTGM40(slideIndexTGM40);
+        function plusSlidesTGM40(n) {
+            showSlidesTGM40(slideIndexTGM40 += n);
+        }
+        function currentSlideTGM40(n) {
+            showSlidesTGM40(slideIndexTGM40 = n);
+        }
+        function showSlidesTGM40(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesTGM40");
+            var dots = document.getElementsByClassName("dotTGM40");
+            if (n > slides.length) {
+                slideIndexTGM40 = 1
+            }
+            if (n < 1) {
+                slideIndexTGM40 = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndexTGM40 - 1].style.display = "block";
+            dots[slideIndexTGM40 - 1].className += " active";
+        }
+
+        //---
 
         var slideIndex2 = 1;
         showSlides2(slideIndex2);
