@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .SliderTGM40 {
+.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .SliderTGM40, .sliderD49, .s2063 {
     display: none
 }
 
@@ -68,7 +68,7 @@ img {
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dotTGM40 {
+.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dotTGM40, .dotSliderD49, .dotS2063 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -86,7 +86,9 @@ img {
 .dot4::hover,
 .dot5::hover,
 .dot6::hover,
-.dotTGM40::hover {
+.dotTGM40::hover,
+.dotSliderD49:hover,
+.dotS2063 {
     background-color: #111111;
 }
 
